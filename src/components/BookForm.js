@@ -1,8 +1,9 @@
-
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addBook } from "../redux/bookSlice";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "../styles/BookForm.css";
 
 const BookForm = () => {
@@ -13,7 +14,14 @@ const BookForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (title.trim() === "" || author.trim() === "") {
+      toast.error("Both fields are required.");
+      return;
+    }
+
     dispatch(addBook({ title, author }));
+    toast.success("Book added successfully!");
     setTitle("");
     setAuthor("");
   };
@@ -49,6 +57,9 @@ const BookForm = () => {
       <button className="book-list-btn" onClick={() => navigate("/booklist")}>
         View Book List
       </button>
+
+      {/* Toastify Container */}
+      <ToastContainer />
     </div>
   );
 };

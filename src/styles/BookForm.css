@@ -1,131 +1,136 @@
 
 body {
-    font-family: "Roboto", sans-serif;
-    background: hsla(154, 100%, 76%, 1);
-    background: linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
-    background: -moz-linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#84FFC9", endColorstr="#AAB2FF", GradientType=1 );
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Container */
+  font-family: "Roboto", sans-serif;
+  background: hsla(154, 100%, 76%, 1);
+  background: linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#84FFC9", endColorstr="#AAB2FF", GradientType=1 );
+  margin: 0;
+  padding: 0;
+}
+
+/* Container */
+.book-form-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Welcome Section */
+.welcome-section {
+  margin-bottom: 20px;
+}
+
+.welcome-section h1 {
+  font-size: 2.5rem;
+  color: #343a40;
+  margin-bottom: 10px;
+}
+
+.welcome-section p {
+  font-size: 1.2rem;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+/* Form */
+.book-form {
+  margin-top: 20px;
+}
+
+.book-form h2 {
+  font-size: 2rem;
+  color: #495057;
+  margin-bottom: 20px;
+}
+
+.book-form input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.book-form input:focus {
+  outline: none;
+  border-color: #007bff; /* Modern blue color */
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
+}
+
+.book-form button {
+  width: 100%;
+  padding: 12px 15px;
+  background: #007bff;
+  color: #ffffff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.book-form button:hover {
+  background: #0056b3;
+  transform: scale(1.02);
+}
+
+.book-form button:active {
+  transform: scale(0.98);
+}
+
+/* View Book List Button */
+.book-list-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #6c757d;
+  color: #ffffff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.book-list-btn:hover {
+  background: #5a6268;
+  transform: scale(1.02);
+}
+
+.book-list-btn:active {
+  transform: scale(0.98);
+}
+
+.toastify-toast {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .book-form-container {
-    max-width: 800px;
-    margin: 50px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: 20px;
   }
-  
-  /* Welcome Section */
-  .welcome-section {
-    margin-bottom: 20px;
-  }
-  
+
   .welcome-section h1 {
-    font-size: 2.5rem;
-    color: #343a40;
-    margin-bottom: 10px;
-  }
-  
-  .welcome-section p {
-    font-size: 1.2rem;
-    color: #6c757d;
-    line-height: 1.6;
-  }
-  
-  /* Form */
-  .book-form {
-    margin-top: 20px;
-  }
-  
-  .book-form h2 {
     font-size: 2rem;
-    color: #495057;
-    margin-bottom: 20px;
   }
-  
-  .book-form input {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    border: 1px solid #ced4da;
-    border-radius: 8px;
+
+  .welcome-section p {
     font-size: 1rem;
-    transition: border-color 0.3s;
   }
-  
-  .book-form input:focus {
-    outline: none;
-    border-color: #007bff; /* Modern blue color */
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
-  }
-  
-  .book-form button {
-    width: 100%;
-    padding: 12px 15px;
-    background: #007bff;
-    color: #ffffff;
-    font-size: 1.1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-  }
-  
-  .book-form button:hover {
-    background: #0056b3;
-    transform: scale(1.02);
-  }
-  
-  .book-form button:active {
-    transform: scale(0.98);
-  }
-  
-  /* View Book List Button */
+
+  .book-form button,
   .book-list-btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #6c757d;
-    color: #ffffff;
     font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
   }
-  
-  .book-list-btn:hover {
-    background: #5a6268;
-    transform: scale(1.02);
-  }
-  
-  .book-list-btn:active {
-    transform: scale(0.98);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .book-form-container {
-      padding: 20px;
-    }
-  
-    .welcome-section h1 {
-      font-size: 2rem;
-    }
-  
-    .welcome-section p {
-      font-size: 1rem;
-    }
-  
-    .book-form button,
-    .book-list-btn {
-      font-size: 1rem;
-    }
-  }
-  
+}
