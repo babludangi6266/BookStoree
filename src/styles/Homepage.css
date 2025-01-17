@@ -1,0 +1,146 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    overflow-x: hidden;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #ff5722;
+    color: #fff;
+  }
+  
+  .header .logo h1 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  
+  .login-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #ff5722;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background-color: #ffd3b6;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 5%;
+    background: linear-gradient(to right, #ffecd2, #fcb69f);
+    min-height: 90vh;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  
+  .hero-image img {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* About Section */
+  .about {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #fff;
+  }
+  
+  .about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  
+  .about ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .about ul li {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #555;
+  }
+  
+  /* Explore Section */
+  .explore {
+    padding: 4rem 5%;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .explore h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .category-card {
+    padding: 1.5rem 2rem;
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .category-card:hover {
+    background-color: #ff8a50;
+    transform: translateY(-5px);
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 2rem 5%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+  }
+  

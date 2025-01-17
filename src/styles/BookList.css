@@ -1,0 +1,239 @@
+
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  /* BookList Container */
+  .booklist-container {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  .booklist-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .booklist-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .booklist-header p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .button-group {
+    margin-top: 15px;
+  }
+  
+  .add-button,
+  .logout-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-button:hover,
+  .logout-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Book List Content */
+  .booklist-content {
+    margin-top: 20px;
+  }
+  
+  .booklist {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  
+  .book-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #333;
+  }
+  
+  .book-info p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  .booklist-header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .booklist-header h1 {
+    font-size: 2.8rem;
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .header-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  .booklist-footer {
+    margin-top: 30px;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #555;
+    border-top: 1px solid #ddd;
+  }
+  
+  .booklist-footer p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .booklist-footer p span {
+    color: #007bff;
+    font-weight: bold;
+  }  
+  
+  /* Book Item */
+.book-item {
+  background: linear-gradient(145deg, #fafafa, #d9d9d9); /* Light gradient for book cover */
+  border: 1px solid #c4c4c4; /* Subtle border for a clean look */
+  border-radius: 16px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15), inset 0 0 15px rgba(255, 255, 255, 0.2); /* Depth and light effect */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  font-family: "Merriweather", serif; 
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Book Spine Effect */
+.book-item:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 15px;
+  background: linear-gradient(90deg, #ccc, #f0f0f0, #ccc);
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1); /* 3D depth for the spine */
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+/* Ribbon for Highlighted Books */
+.book-item:after {
+  content: "Top Pick";
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  background: #ff4747;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transform: rotate(45deg);
+  padding: 5px 40px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  display: none; /* Hide ribbon by default */
+}
+
+.book-item:hover:after {
+  display: block; /* Show ribbon on hover */
+}
+
+/* Hover Effects */
+.book-item:hover {
+  transform: translateY(-10px) scale(1.05); 
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3); 
+}
+
+/* Title */
+.book-title {
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #2e2e2e;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Author */
+.book-author {
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* Book Cover Image */
+.book-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+/* Hover Zoom on Image */
+.book-item:hover .book-image {
+  transform: scale(1.1);
+  border-radius: 12px;
+}
+
+/* Book Description */
+.book-description {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #4a4a4a;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Add a Glow Effect */
+.book-item:hover .book-title {
+  text-shadow: 0 2px 8px rgba(0, 255, 255, 0.5); /* Glowing text effect */
+}
+
+/* Add Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -100px 0;
+  }
+  100% {
+    background-position: 200px 0;
+  }
+}
+
+.book-item {
+  background-image: linear-gradient(
+    145deg,
+    #fafafa,
+    #d9d9d9,
+    #e8e8e8,
+    #fafafa
+  );
+  background-size: 400% 400%;
+  animation: shimmer 5s infinite;
+}
